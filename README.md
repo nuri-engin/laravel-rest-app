@@ -1,5 +1,11 @@
 # laravel-rest-app
-Just another Laravel RESTful Application
+
+<small> The application is on live on HEROKU </small> 
+
+<a href="https://laravel-rest-app.herokuapp.com" rel="laravel-rest-app">![laravel-rest-app](https://img.shields.io/badge/Heroku-430098?style=for-the-badge&logo=heroku&logoColor=white)</a> 
+
+---
+## # Just another Laravel RESTful Application
 
 The application uses PostgreSQL as database solution.
 Database version will be 14 to follow latest features. 
@@ -8,14 +14,17 @@ Ensure to install PostgreSQL to your computer, and use he PGAdmin to connect to 
 
 Laravel migration process will handle the database schema creation process.
 
----
-## How to run
+## # How to run
 - Clone the project
 - Set the `env` variables.
 - Open the terminal and `cd` into the application folder
 - Run the command: `php artisan serve`
 - Open the Postman and request `http://127.0.0.1:8000/api/products` 
 
+## # Postman collections
+Application built-in API request samples exist with Postman Collection folder.
 
-## Nice to know
+Go to: [/postman-collection/README.md](postman-collection/README.md)
+
+## # Nice to know
 - List all exist routes: `php artisan route:list`
