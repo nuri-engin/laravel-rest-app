@@ -15,3 +15,7 @@ Laravel migration process will handle the database schema creation process.
 - Open the terminal and `cd` into the application folder
 - Run the command: `php artisan serve`
 - Open the Postman and request `http://127.0.0.1:8000/api/products` 
+
+
+## Nice to know
+- List all exist routes: `php artisan route:list`
