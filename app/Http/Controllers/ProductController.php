@@ -71,4 +71,19 @@ class ProductController extends Controller
     {
         return Product::destroy($id);
     }
+
+    /**
+     * Search the specified resource from storage with 'name' field.
+     *
+     * @param  str  $name
+     * @return \Illuminate\Http\Response
+     */
+    public function search($name)
+    {
+        // Match EXACT
+        // return Product::where('name', $name)->get();
+
+        // Match LIKE
+        return Product::where('name', 'like', '%'.$name.'%')->get();
+    }
 }

@@ -17,6 +17,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::resource('products', ProductController::class);
+Route::get('products/search/{name}', [ProductController::class, 'search']);
 
 // Enable those routes later on for the authentication purposes.
 // Route::get('/products', [ProductController::class, 'index']);
