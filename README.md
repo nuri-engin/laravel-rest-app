@@ -39,6 +39,3 @@ Go to: [/postman-collection/README.md](postman-collection/)
     - GET|HEAD | api/user 
     - GET|HEAD | sanctum/csrf-cookie 
                 
-
-## # Nice to know
-- List all exist routes: `php artisan route:list`
