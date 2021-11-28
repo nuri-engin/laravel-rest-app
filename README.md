@@ -39,3 +39,7 @@ Go to: [/postman-collection/README.md](postman-collection/)
     - GET|HEAD | api/user 
     - GET|HEAD | sanctum/csrf-cookie 
                 
+## # What is next
+- Emailing feature for auth.
+- API-Doc product
+- CI/CD process
