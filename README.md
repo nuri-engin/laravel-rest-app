@@ -24,7 +24,7 @@ Laravel migration process will handle the database schema creation process.
 ## # Postman collections
 Application built-in API request samples exist with Postman Collection folder.
 
-Go to: [/postman-collection/README.md](postman-collection/README.md)
+Go to: [/postman-collection/README.md](postman-collection/)
 
 ## # Nice to know
 - List all exist routes: `php artisan route:list`

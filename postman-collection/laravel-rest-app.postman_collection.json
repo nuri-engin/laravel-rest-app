@@ -6,70 +6,7 @@
 	},
 	"item": [
 		{
-			"name": "Get all products",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "{{MAIN}}/api/products",
-					"host": [
-						"{{MAIN}}"
-					],
-					"path": [
-						"api",
-						"products"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Get a product",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "{{MAIN}}/api/products/1",
-					"host": [
-						"{{MAIN}}"
-					],
-					"path": [
-						"api",
-						"products",
-						"1"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Search a product with name",
-			"request": {
-				"method": "GET",
-				"header": [
-					{
-						"key": "Accept",
-						"value": "application/json",
-						"type": "text"
-					}
-				],
-				"url": {
-					"raw": "{{MAIN}}/api/products/search/P",
-					"host": [
-						"{{MAIN}}"
-					],
-					"path": [
-						"api",
-						"products",
-						"search",
-						"P"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Save product",
+			"name": "Auth Register",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -84,7 +21,143 @@
 					"urlencoded": [
 						{
 							"key": "name",
-							"value": "Product 1",
+							"value": "Some Person 4",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "some4@mail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "text"
+						},
+						{
+							"key": "password_confirmation",
+							"value": "123456",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{MAIN}}/api/register",
+					"host": [
+						"{{MAIN}}"
+					],
+					"path": [
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Auth Login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "some4@mail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{MAIN}}/api/login",
+					"host": [
+						"{{MAIN}}"
+					],
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Auth Logout",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "8|cxww1IieVcYsUtQMPa8RUWQs1jpOtSRP5uB8zPKl",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "{{MAIN}}/api/logout",
+					"host": [
+						"{{MAIN}}"
+					],
+					"path": [
+						"api",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Save product",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "3|dAa2SH1ptoVEc3Lm1HQKBmXzaQ2F6bTop6TRNpHQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Product Token",
 							"type": "text"
 						},
 						{
@@ -118,8 +191,81 @@
 			"response": []
 		},
 		{
+			"name": "Get all products",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{MAIN}}/api/products",
+					"host": [
+						"{{MAIN}}"
+					],
+					"path": [
+						"api",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get a product",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{LOCAL}}/api/products/1",
+					"host": [
+						"{{LOCAL}}"
+					],
+					"path": [
+						"api",
+						"products",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search a product with name",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{LOCAL}}/api/products/search/P",
+					"host": [
+						"{{LOCAL}}"
+					],
+					"path": [
+						"api",
+						"products",
+						"search",
+						"P"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "Update product",
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "8|cxww1IieVcYsUtQMPa8RUWQs1jpOtSRP5uB8zPKl",
+							"type": "string"
+						}
+					]
+				},
 				"method": "PUT",
 				"header": [
 					{
@@ -154,14 +300,14 @@
 					]
 				},
 				"url": {
-					"raw": "{{MAIN}}/api/products/2",
+					"raw": "{{MAIN}}/api/products/3",
 					"host": [
 						"{{MAIN}}"
 					],
 					"path": [
 						"api",
 						"products",
-						"2"
+						"3"
 					]
 				}
 			},
@@ -170,6 +316,16 @@
 		{
 			"name": "Delete product",
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "3|dAa2SH1ptoVEc3Lm1HQKBmXzaQ2F6bTop6TRNpHQ",
+							"type": "string"
+						}
+					]
+				},
 				"method": "DELETE",
 				"header": [
 					{
@@ -204,14 +360,14 @@
 					]
 				},
 				"url": {
-					"raw": "{{MAIN}}/api/products/2",
+					"raw": "{{LOCAL}}/api/products/1",
 					"host": [
-						"{{MAIN}}"
+						"{{LOCAL}}"
 					],
 					"path": [
 						"api",
 						"products",
-						"2"
+						"1"
 					]
 				}
 			},
