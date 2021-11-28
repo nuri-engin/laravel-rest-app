@@ -26,5 +26,19 @@ Application built-in API request samples exist with Postman Collection folder.
 
 Go to: [/postman-collection/README.md](postman-collection/)
 
+## # Route list
+    - POST     | api/login 
+    - POST     | api/logout 
+    - GET|HEAD | api/products 
+    - POST     | api/products 
+    - GET|HEAD | api/products/search/{name} 
+    - GET|HEAD | api/products/{id} 
+    - PUT      | api/products/{id} 
+    - DELETE   | api/products/{id} 
+    - POST     | api/register 
+    - GET|HEAD | api/user 
+    - GET|HEAD | sanctum/csrf-cookie 
+                
+
 ## # Nice to know
 - List all exist routes: `php artisan route:list`
